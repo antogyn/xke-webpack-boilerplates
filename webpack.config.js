@@ -8,7 +8,17 @@ module.exports = {
     filename: 'app.js', // le nom de l'output
     publicPath: '/dist/' // le path de l'output relatif au host
   },
+  eslint: {
+    configFile: '.eslintrc'
+  },
   module: {
+    preLoaders: [
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        loader: "eslint"
+      }
+    ],
     loaders: [
       {
         test: /\.html$/, // si je rencontre un import de fichier html...
