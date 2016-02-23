@@ -1,4 +1,10 @@
+@font-face {
+    font-family: myFooFont;
+    src: url(my-foo.otf);
+}
+
 my-foo {
+  font-family: myFooFont;
   display: block;
   background-color: blue; /* et je suis bleu ! */
   font-size: 3em;

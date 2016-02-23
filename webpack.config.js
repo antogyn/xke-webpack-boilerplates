@@ -11,6 +11,14 @@ module.exports = {
   module: {
     loaders: [
       {
+        test: /\.gif/,
+        loader: "file?name=img/[name].[ext]"
+      },
+      {
+        test: /\.otf/,
+        loader: 'file?name=fonts/[name].[ext]'
+      },
+      {
         test: /\.html$/, // si je rencontre un import de fichier html...
         loader: 'html' //... alors j'utilise le loader html
       },
