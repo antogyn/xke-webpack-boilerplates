@@ -1,3 +1,5 @@
+var ExtractTextPlugin = require('extract-text-webpack-plugin');
+
 module.exports = {
   context: __dirname, // la racine de l'app (fs)
   entry: {
@@ -8,6 +10,9 @@ module.exports = {
     filename: 'app.js', // le nom de l'output
     publicPath: '/dist/' // le path de l'output relatif au host
   },
+  plugins: [
+    new ExtractTextPlugin('app.css')
+  ],
   module: {
     loaders: [
       {
@@ -16,7 +21,7 @@ module.exports = {
       },
       {
         test: /\.css/, // si je rencontre un import de fichier css...
-        loader: 'style!css' //... alors j'utilise les loaders style et css
+        loader: ExtractTextPlugin.extract('style', 'css') //... alors j'utilise les loaders style et css
       },
       {
         test: /\.js$/, // si je rencontre un import de fichier js...
