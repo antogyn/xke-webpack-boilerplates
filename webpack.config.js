@@ -1,3 +1,5 @@
+var CompressionPlugin = require('compression-webpack-plugin');
+
 module.exports = {
   context: __dirname, // la racine de l'app (fs)
   entry: {
@@ -8,6 +10,9 @@ module.exports = {
     filename: 'app.js', // le nom de l'output
     publicPath: '/dist/' // le path de l'output relatif au host
   },
+  plugins: [
+    new CompressionPlugin()
+  ],
   module: {
     loaders: [
       {
