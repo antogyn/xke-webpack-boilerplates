@@ -1,9 +1,7 @@
 module.exports = {
   context: __dirname, // la racine de l'app (fs)
   entry: {
-    app: [
-      './public/app.js' // les points d'entrée de l'app, relatifs à la racine
-    ]
+    app: [ './public/app.js' ], // les points d'entrée de l'app
   },
   output: {
     path: __dirname + '/dist', // le path absolu de l'output (fs)
@@ -21,8 +19,8 @@ module.exports = {
         loader: 'style!css' //... alors j'utilise les loaders style et css
       },
       {
-        test: /\.js$/,// si je rencontre un import de fichier js...
-        exclude: [/node_modules/],//... qui n'est pas dans /node_modules/...
+        test: /\.js$/, // si je rencontre un import de fichier js...
+        exclude: [/node_modules/], //... qui n'est pas dans /node_modules/...
         loader: 'babel' //... alors j'utilise le loader babel
       }
       // pour tout le reste, webpack utilise le js loader (built-in)
