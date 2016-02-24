@@ -1,13 +1,20 @@
+var BundleTracker = require('webpack-bundle-tracker');
+
 module.exports = {
   context: __dirname, // la racine de l'app (fs)
   entry: {
-    app: [ './public/app.js' ], // les points d'entrée de l'app
+    app: [ './public/app.js' ] // les points d'entrée de l'app
   },
   output: {
     path: __dirname + '/dist', // le path absolu de l'output (fs)
-    filename: 'app.js', // le nom de l'output
+    filename: 'app-[hash].js', // le nom de l'output
     publicPath: '/dist/' // le path de l'output relatif au host
   },
+  plugins: [
+    new BundleTracker({
+      path: __dirname,
+      filename: 'webpack-manifest.json'})
+  ],
   module: {
     loaders: [
       {
