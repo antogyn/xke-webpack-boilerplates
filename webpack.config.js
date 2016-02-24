@@ -1,13 +1,19 @@
+var webpack = require('webpack');
+
 module.exports = {
   context: __dirname, // la racine de l'app (fs)
   entry: {
     app: [ './public/app.js' ], // les points d'entrée de l'app
+    vendors: ['jquery']
   },
   output: {
     path: __dirname + '/dist', // le path absolu de l'output (fs)
     filename: 'app.js', // le nom de l'output
     publicPath: '/dist/' // le path de l'output relatif au host
   },
+  plugins: [
+    new webpack.optimize.CommonsChunkPlugin('vendors', 'vendors.js')
+  ],
   module: {
     loaders: [
       {
