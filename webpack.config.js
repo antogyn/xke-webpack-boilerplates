@@ -8,6 +8,7 @@ module.exports = {
     filename: 'app.js', // le nom de l'output
     publicPath: '/dist/' // le path de l'output relatif au host
   },
+  devtool: "source-map",
   module: {
     loaders: [
       {
@@ -22,8 +23,11 @@ module.exports = {
         test: /\.js$/, // si je rencontre un import de fichier js...
         exclude: [/node_modules/], //... qui n'est pas dans /node_modules/...
         loader: 'babel' //... alors j'utilise le loader babel
+      },
+      {
+        test: /\.scss$/,
+        loaders: ["style", "css?sourceMap", "sass?sourceMap"]
       }
-      // pour tout le reste, webpack utilise le js loader (built-in)
     ]
   }
 };
