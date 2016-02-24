@@ -4,7 +4,7 @@ module.exports = {
   context: __dirname, // la racine de l'app (fs)
   entry: {
     app: [ './public/app.js' ], // les points d'entrée de l'app
-    vendors: ['jquery']
+    vendors: './public/vendors.js'
   },
   output: {
     path: __dirname + '/dist', // le path absolu de l'output (fs)
