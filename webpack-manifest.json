@@ -1,0 +1,13 @@
+{
+  "status": "done",
+  "chunks": {
+    "app": [
+      {
+        "name": "app-0a277e942b5125d06389.js",
+        "publicPath": "/dist/app-0a277e942b5125d06389.js",
+        "path": "/Users/modulom/Dev/xke/xke-webpack-boilerplates/dist/app-0a277e942b5125d06389.js"
+      }
+    ]
+  },
+  "publicPath": "/dist/"
+}
