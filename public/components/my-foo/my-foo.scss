@@ -1,0 +1,6 @@
+$color-back: blue;
+my-foo {
+  display: block;
+  background-color: $color-back; /* et je suis bleu ! */
+  font-size: 3em;
+}
