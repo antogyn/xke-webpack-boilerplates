@@ -1,5 +1,5 @@
 // my-foo.js
-import './my-foo.css'; // import du style
+import './my-foo.scss'; // import du style
 import template from './my-foo.html'; // import du template
 
 console.log('source-maps test !');
