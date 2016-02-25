@@ -4,7 +4,7 @@
   "description": "",
   "scripts": {
     "start": "webpack -d && open http://localhost:8082/index.html && node server.js",
-    "watch": "webpack-dev-server --inline --hot --content dist/"
+    "watch": "webpack-dev-server --inline --hot --content dist/ --port 8082 & open http://localhost:8082/index.html"
   },
   "repository": {
     "type": "git",
