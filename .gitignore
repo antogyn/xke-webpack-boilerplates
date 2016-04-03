@@ -1,5 +1,7 @@
 node_modules
 dist
+index.html
+webpack-manifest.json
 
 ### OSX template
 .DS_Store
