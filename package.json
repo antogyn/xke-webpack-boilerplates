@@ -4,7 +4,7 @@
   "description": "",
   "scripts": {
     "start": "webpack -d && open http://localhost:8082/index.html && node server.js",
-    "build": "webpack -d && mustache webpack-manifest.json index.mustache > index.html",
+    "build": "webpack && mustache webpack-manifest.json index.mustache > index.html",
     "index": "mustache webpack-manifest.json index.mustache > index.html"
   },
   "repository": {
